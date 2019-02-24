@@ -7,7 +7,7 @@
 #include <cmath>
 #include <iomanip>
 #include <fstream>
-
+using namespace std;
 /// Prototype declaration
 void Initialization();
 void Finalization();
@@ -23,8 +23,9 @@ int  __userChoice;               /// a global variable to store user choice
 bool __isExiting = false;        /// this variable should be turn on when the program exits
 
 // TODO: add more global variables to complete tasks
-fstream f;
+
 char* data;
+
 ///--------------------------------------------------------------------
 /**
  * Function: Initialization
@@ -33,7 +34,7 @@ char* data;
  * Output:   None
  */
 void Initialization() {
-    f.open("conf.json");
+    
     LoadConfiguration();
     LoadMenu();
     // TODO: write the code to initialize the program
@@ -51,7 +52,8 @@ void Finalization() {
 }
 
 void LoadConfiguration() {
-
+	fstream outfile;
+	outfile.open("conf.json");
     // TODO: write code to load data from the configuration file
 }
 
